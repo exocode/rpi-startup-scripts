@@ -4,7 +4,7 @@ if [ $# -eq 1 ] && [ $1 = "usage" ]; then
     exit 0
 fi
 
-if [ $# -eq 1 ]; then
+if [ $# -eq 2 ]; then
     # Configuring keyboard
     printf "Reloading keymap. This may take a short while\n"
     dpkg-reconfigure keyboard-configuration
