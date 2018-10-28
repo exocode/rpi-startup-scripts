@@ -1,3 +1,8 @@
+if [ $# -eq 1 ] && [ $1 = "usage" ] || [ $1 = "man"]; then
+    echo "Usage: $0 KEYBOARD_LAYOUT TIMEZONE"
+    echo "Example: $0 de \"Europe/Vienna\""
+    exit 0
+fi
 
 if [ $# -eq 1 ]; then
     # Configuring keyboard
@@ -9,7 +14,4 @@ if [ $# -eq 1 ]; then
     INTERACTIVE=true
     echo "LangValue: $1"
     sed -i 's/XKBLAYOUT="gb"/XKBLAYOUT="$1"/' /etc/default/keyboard
-else
-  echo "dollar0: $0"
-  echo "dollar1: $1"
 fi
