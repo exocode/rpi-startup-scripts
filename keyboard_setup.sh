@@ -1,4 +1,4 @@
-if [ $# -eq 1 ] && [ $1 = "usage" ] || [ $1 = "man"]; then
+if [ $# -eq 1 ] && [ $1 = "usage" ]; then
     echo "Usage: $0 KEYBOARD_LAYOUT TIMEZONE"
     echo "Example: $0 de \"Europe/Vienna\""
     exit 0
